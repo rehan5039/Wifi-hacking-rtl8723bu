@@ -38,8 +38,10 @@ sudo apt install build-essential dkms git
    ```
 
    ```bash
-   cd rtl8723bu
    make
+   ```
+
+   ```bash
    sudo make install
    ```
 
