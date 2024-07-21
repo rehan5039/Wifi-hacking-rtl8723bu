@@ -85,9 +85,17 @@ Verify that your adapter supports monitor mode and packet injection:
    
 ### Step 6: Wifi Hack
 
+#### 1. Enable Monitor Mode
+   ```bash
+   airmon-ng start wlan0
+   ```
+   Replace `wlan0` with your wireless interface.
+
+#### 2. Capture Packets
 ```bash
 airodump-ng wlan0
 ```
+This will display available Wi-Fi networks.
 
 ```bash
 airodump-ng -c [channel] --bssid [BSSID] -w  capture wlan0
