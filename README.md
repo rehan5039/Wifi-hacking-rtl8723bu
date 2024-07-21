@@ -177,3 +177,53 @@ To ensure you're using the correct driver:
   iwconfig
   ```
   
+
+### Steps to Resolve the Issue
+
+To proceed with using `aircrack-ng`, you'll want to stop these processes to prevent interference:
+
+1. **Stop Interfering Processes**:
+
+   Use `airmon-ng` to check for interfering processes and kill them:
+
+   ```bash
+   sudo airmon-ng check kill
+   ```
+
+   This command will stop `NetworkManager` and `wpa_supplicant`, which might be putting the interface back to managed mode.
+
+2. **Enable Monitor Mode**:
+
+   Now that the interfering processes are stopped, put the interface in monitor mode again using:
+
+   ```bash
+   sudo airmon-ng start wlan0
+   ```
+
+3. **Verify Monitor Mode**:
+
+   You can verify that the interface is in monitor mode by checking with:
+
+   ```bash
+   iwconfig
+   ```
+
+   It should display `Mode:Monitor` next to `wlan0`.
+
+4. **Use Aircrack-ng**:
+
+   Now you can use tools like `airodump-ng` and `aireplay-ng` to start your wireless security testing:
+
+   ```bash
+   sudo airodump-ng wlan0
+   ```
+
+5. **Restart Services**:
+
+   Once you are done using monitor mode, you can restart the services to restore normal wireless functionality:
+
+   ```bash
+   sudo systemctl restart NetworkManager
+   ```
+
+This process should enable you to use your RTL8723BU Wi-Fi adapter with `aircrack-ng` for network security testing.
