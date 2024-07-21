@@ -26,7 +26,7 @@ sudo apt install build-essential dkms git
    You can find the driver for the RTL8723BU on GitHub. Clone the repository using the following command:
 
    ```bash
-   https://github.com/rehan5039/Wifi-hacking-rtl8723bu/tree/main/rtl8723bu-master
+   git clone https://github.com/rehan5039/Wifi-hacking-rtl8723bu.git
    ```
 
 2. **Build and Install the Driver**:
@@ -34,12 +34,16 @@ sudo apt install build-essential dkms git
    Navigate to the downloaded directory and build the driver:
 
    ```bash
+   cd Wifi-hacking-rtl8723bu && cd rtl8723bu
+   ```
+
+   ```bash
    cd rtl8723bu
    make
    sudo make install
    ```
 
-3. **Load the Driver**:
+4. **Load the Driver**:
 
    Once installed, load the driver using:
 
