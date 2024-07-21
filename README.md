@@ -69,6 +69,12 @@ sudo ip link set wlan0 up
 
 Verify that your adapter supports monitor mode and packet injection:
 
+### Prerequisites
+
+1. **Kali Linux**: Install Kali Linux, either on a virtual machine or as a primary OS.
+2. **Wi-Fi Adapter**: Ensure you have a Wi-Fi adapter capable of packet injection and monitor mode.
+3. **Legal Permission**: Ensure you have permission to test the network.
+
 ### Common Tools Used
 
 1. **airmon-ng**: Enables monitor mode on your wireless interface.
