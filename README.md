@@ -69,6 +69,8 @@ sudo ip link set wlan0 up
 
 Verify that your adapter supports monitor mode and packet injection:
 
+### Step 5: Wifi Hack
+
 ```bash
 airodump-ng wlan0
 ```
