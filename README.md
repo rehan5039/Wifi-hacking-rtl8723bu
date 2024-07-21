@@ -95,7 +95,7 @@ You should see "Mode:Monitor" next to your wireless interface.
 - **Error Messages**: Check for error messages during the `make` or `make install` process. They can provide clues about what might be going wrong.
 - **Reboot**: Sometimes, a simple reboot can help load the necessary drivers correctly.
 
-This should set up your Wi-Fi adapter for use with **aircrack-ng**. If you encounter specific errors or issues, feel free to ask for more detailed troubleshooting!
+This should set up your Wi-Fi adapter for use with **aircrack-ng**.
 
 
 ### Another Method
@@ -149,3 +149,31 @@ sudo cp -r core hal include os_dep platform dkms.conf Makefile rtl8723b_fw.bin /
 sudo dkms add $PACKAGE_NAME/$PACKAGE_VERSION
 sudo dkms autoinstall $PACKAGE_NAME/$PACKAGE_VERSION
 ```
+
+### Steps to Ensure Correct Driver Use:
+To ensure you're using the correct driver:
+
+- **Blacklist the Default Driver:**
+  To prevent the default `rtl8xxxu` driver from loading, create a blacklist file:
+
+  ```bash
+  echo "blacklist rtl8xxxu" | sudo tee /etc/modprobe.d/rtl8xxxu.conf
+  ```
+
+- **Rebuild and Reload Driver:**
+  Ensure you are in the `rtl8723bu` directory and rebuild the module:
+
+  ```bash
+  make clean
+  make
+  sudo make install
+  sudo modprobe 8723bu
+  ```
+
+- **Verify the Driver:**
+  After loading the module, verify the driver in use:
+
+  ```bash
+  iwconfig
+  ```
+  
