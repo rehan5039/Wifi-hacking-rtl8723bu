@@ -243,12 +243,12 @@ It seems like you're trying to install and compile the Realtek RTL8723BU wireles
 3. **Clone the Driver Repository:**
    You correctly cloned the repository using:
    ```bash
-   git clone https://github.com/lwfinger/rtl8723bu.git
+   git clone git clone https://github.com/rehan5039/Wifi-hacking-rtl8723bu.git
    ```
 
 4. **Change Directory to the Cloned Repository:**
    ```bash
-   cd rtl8723bu
+   cd Wifi-hacking-rtl8723bu/rtl8723bu-master
    ```
 
 5. **Compile the Driver:**
