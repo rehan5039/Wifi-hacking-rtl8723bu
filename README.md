@@ -118,6 +118,8 @@ Replace `[wordlist]` with a path to a wordlist file.
 
 You should see "Mode:Monitor" next to your wireless interface.
 
+Note:- Before doing all this, run **sudo su** command.
+
 ### Troubleshooting
 
 - **Driver Compatibility**: If you face any issues, ensure the driver you are using is compatible with your kernel version.
