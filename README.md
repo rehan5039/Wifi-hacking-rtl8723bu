@@ -34,7 +34,7 @@ sudo apt install build-essential dkms git
    Navigate to the downloaded directory and build the driver:
 
    ```bash
-   cd Wifi-hacking-rtl8723bu && cd rtl8723bu
+   cd Wifi-hacking-rtl8723bu/rtl8723bu-master
    ```
 
    ```bash
