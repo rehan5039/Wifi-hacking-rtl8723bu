@@ -282,3 +282,9 @@ It seems like you're trying to install and compile the Realtek RTL8723BU wireles
    ```
    Look for a wireless interface (like `wlan0` or similar).
    
+### Step 10: Auto-Load the Driver on Boot
+Ensure karein ki driver automatically boot par load ho:
+
+```bash
+echo "8723bu" | sudo tee -a /etc/modules
+```
