@@ -98,7 +98,8 @@ You should see "Mode:Monitor" next to your wireless interface.
 This should set up your Wi-Fi adapter for use with **aircrack-ng**. If you encounter specific errors or issues, feel free to ask for more detailed troubleshooting!
 
 
-### Method
+### Another Method
+
 # rtl8723bu
 Driver for Realtek RTL8723BU Wireless Adapter with Hardware ID `0bda:b720`
 
