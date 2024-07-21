@@ -69,6 +69,14 @@ sudo ip link set wlan0 up
 
 Verify that your adapter supports monitor mode and packet injection:
 
+### Common Tools Used
+
+1. **airmon-ng**: Enables monitor mode on your wireless interface.
+2. **airodump-ng**: Captures packets from the network.
+3. **aireplay-ng**: Performs packet injection.
+4. **aircrack-ng**: Cracks the password using the captured packets.
+
+   
 ### Step 6: Wifi Hack
 
 ```bash
