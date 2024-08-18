@@ -128,7 +128,7 @@ Replace `[wordlist]` with a path to a wordlist file.
    cp /usr/share/wordlists/rockyou.txt ~/Desktop/
    ```
 
-After running this command the `rokyo.tst` wordlist file will be copied to your desktop.
+After running this command the `rokyo.txt` wordlist file will be copied to your desktop.
 
 After the world list is copied to the desktop you need to write like this command to crack the handshake file
 
