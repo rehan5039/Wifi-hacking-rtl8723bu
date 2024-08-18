@@ -116,6 +116,26 @@ aircrack-ng capture.cap -w [wordlist]
 ```
 Replace `[wordlist]` with a path to a wordlist file.
 
+ **RockYou.txt**: This World List comes pre-installed in Kali Linux `rockyou.txt` To locate the wordlist file, you must first unzip it in Kali Linux. This file resides in the default location inside the `/usr/share/wordlists/` folder. To extract it:
+
+   ```bash
+   sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
+   ```
+
+**Copy to Desktop**: You can then copy this file to your desktop. Use this command in the terminal:
+
+   ```bash
+   cp /usr/share/wordlists/rockyou.txt ~/Desktop/
+   ```
+
+After running this command the `rokyo.tst` wordlist file will be copied to your desktop.
+
+After the world list is copied to the desktop you need to write like this command to crack the handshake file
+
+   ```bash
+aircrack-ng capture.cap -w [Hold the world list and drop it here]
+   ```
+
 You should see "Mode:Monitor" next to your wireless interface.
 
 Note:- Before doing all this, run **sudo su** command.
